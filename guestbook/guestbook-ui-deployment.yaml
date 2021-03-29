@@ -14,14 +14,8 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+      - image: quay.io/rzhang/ks-guestbook-demo:0.2
         name: guestbook-ui
         ports:
         - containerPort: 80
-        env:
-        - name: HTTP_PROXY
-          value: 192.168.2.28:3128
-        - name: HTTP_PROXY
-          value: 192.168.2.28:3128
-        - name: NO_PROXY
-          value: 10.217.1.0/24, kubenetes.default.svc, 10.217.0.0/16
+
