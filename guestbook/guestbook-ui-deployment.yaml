@@ -18,3 +18,10 @@ spec:
         name: guestbook-ui
         ports:
         - containerPort: 80
+        env:
+        - name: HTTP_PROXY
+          value: squid.galaxy:3128
+        - name: HTTP_PROXY
+          value: squid.galaxy:3128
+        - name: NO_PROXY
+          value: 10.217.1.0/24, kubenetes.default.svc, 10.217.0.0/16
