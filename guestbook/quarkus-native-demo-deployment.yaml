@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quarkus-native-demo
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: quarkus-native-demo
+  template:
+    metadata:
+      labels:
+        app: quarkus-native-demo
+    spec:
+      containers:
+      - image: ryanzhangcheng/quarkus-getting-start-native:1.0
+        name: quarkus-demo
+        ports:
+        - containerPort: 8080
+
